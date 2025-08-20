@@ -21,7 +21,7 @@ mycam = 0    # webcam device id (0 for built-in webcam)
 
 myfile = "signal.avi"
 
-cor = 1    #  device (0) or file (1) 
+cor = 0    #  device (0) or file (1) 
 
 #terminal
 pm = 0
@@ -58,19 +58,10 @@ while (pm == 0):
     
     #źródło
     if (inp == 'z'):
-        print ("Program wykorzystuje najpierw wbudowaną kamerkę (jeżeli taką posiadasz), a następnie USB. Czy źródłem ma być kamerka wbudowana (lub USB, jeżeli jej nie ma) (0), USB (jeżeli jest wbudowana) (1) czy nagranie (2)?")
+        print ("Program wykorzystuje najpierw wbudowaną kamerkę (jeżeli taką posiadasz), a następnie USB. Czy źródłem ma być kamerka wbudowana (lub USB, jeżeli jej nie ma) (0) czy USB (jeżeli jest wbudowana) (1)?")
         inp = int (input ())
-        if (inp == 0):
-            cor = 0
-            mycam = 0
-        if (inp == 1):
-            cor = 0
-            mycam = 1
-        if (inp == 2):
-            cor = 1
-            print ("Podaj nazwę pliku z nagraniem (musi znajdować się w tym samym folderze).")
-            myfile = input ()        
-
+        cor = 0
+        mycam = inp
 
 #program
 
